@@ -6,6 +6,8 @@ class TinyPrint < ActiveRecord::Base
 	               :medium_thumb => [ "100x100", :jpg ],
                  :large_thumb => [ "370x370", :jpg ],
 	               :detail_preview => [ "450x338", :jpg ] },
+     #:path => "/prints/:id/:style.:extension",
+    #:default_url => "/images/missing/prints/:style.png"
 	 :storage => :s3,
       :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
       :bucket => "sharmanyros",
